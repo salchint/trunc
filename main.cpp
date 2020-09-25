@@ -19,7 +19,7 @@ int main(int argc, char* argv[])
 		usage();
 	}
 
-	auto flen { std::stoll(std::string(argv[2])) };
+	auto flen { std::stoll(std::string(argv[2]), 0, 0) };
 
 	auto f { CreateFile(argv[1], GENERIC_WRITE, 0, nullptr, OPEN_EXISTING,
 				FILE_ATTRIBUTE_NORMAL, nullptr) };
